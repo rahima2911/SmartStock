@@ -1,0 +1,748 @@
+[
+  {
+    "id": 1755590013154.9944,
+    "name": "Shopping",
+    "price": 434,
+    "user": "Ahmed",
+    "date": "2025-08-16",
+    "time": "12:53 PM",
+    "iconKey": "Grocery",
+    "editedAt": "20/08/2025, 11:21:26"
+  },
+  {
+    "id": 1755590013154.6655,
+    "name": "Vehicle Maintenance",
+    "price": 75,
+    "user": "Rahima",
+    "date": "2025-08-16",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013154.691,
+    "name": "Grocery",
+    "price": 242,
+    "user": "Ahmed",
+    "date": "2025-08-16",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013154.5664,
+    "name": "Food and Drink",
+    "price": 105,
+    "user": "Ahmed",
+    "date": "2025-08-16",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013154.543,
+    "name": "Entertainment",
+    "price": 419,
+    "user": "Ahmed",
+    "date": "2025-08-15",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013154.0464,
+    "name": "Shopping",
+    "price": 396,
+    "user": "Ali",
+    "date": "2025-08-14",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013154.0708,
+    "name": "Transportation",
+    "price": 239,
+    "user": "Ali",
+    "date": "2025-08-14",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013154.3086,
+    "name": "Shopping",
+    "price": 360,
+    "user": "Ahmed",
+    "date": "2025-08-14",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013154.7175,
+    "name": "Vehicle Maintenance",
+    "price": 113,
+    "user": "Rahima",
+    "date": "2025-08-14",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013154.566,
+    "name": "Vehicle Maintenance",
+    "price": 325,
+    "user": "Rahima",
+    "date": "2025-08-14",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013154.4102,
+    "name": "Vehicle Maintenance",
+    "price": 110,
+    "user": "Sara",
+    "date": "2025-08-13",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013154.8428,
+    "name": "Food and Drink",
+    "price": 350,
+    "user": "Ali",
+    "date": "2025-08-13",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013154.0576,
+    "name": "Food and Drink",
+    "price": 107,
+    "user": "Ali",
+    "date": "2025-08-13",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013154.9854,
+    "name": "Grocery",
+    "price": 84,
+    "user": "Rahima",
+    "date": "2025-08-13",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013154.979,
+    "name": "Entertainment",
+    "price": 418,
+    "user": "Sara",
+    "date": "2025-08-13",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.9443,
+    "name": "Vehicle Maintenance",
+    "price": 445,
+    "user": "Ali",
+    "date": "2025-08-12",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.229,
+    "name": "Vehicle Maintenance",
+    "price": 459,
+    "user": "Rahima",
+    "date": "2025-08-12",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.2588,
+    "name": "Grocery",
+    "price": 142,
+    "user": "Ahmed",
+    "date": "2025-08-12",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.328,
+    "name": "Entertainment",
+    "price": 247,
+    "user": "Sara",
+    "date": "2025-08-12",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.9734,
+    "name": "Vehicle Maintenance",
+    "price": 261,
+    "user": "Ahmed",
+    "date": "2025-08-11",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.817,
+    "name": "Grocery",
+    "price": 537,
+    "user": "Ali",
+    "date": "2025-08-11",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.8347,
+    "name": "Entertainment",
+    "price": 212,
+    "user": "Ali",
+    "date": "2025-08-11",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.7336,
+    "name": "Housing",
+    "price": 239,
+    "user": "Rahima",
+    "date": "2025-08-11",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.5479,
+    "name": "Vehicle Maintenance",
+    "price": 381,
+    "user": "Sara",
+    "date": "2025-08-11",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.0632,
+    "name": "Vehicle Maintenance",
+    "price": 548,
+    "user": "Sara",
+    "date": "2025-08-10",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.2869,
+    "name": "Housing",
+    "price": 379,
+    "user": "Sara",
+    "date": "2025-08-10",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.915,
+    "name": "Entertainment",
+    "price": 250,
+    "user": "Ali",
+    "date": "2025-08-10",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.5674,
+    "name": "Shopping",
+    "price": 268,
+    "user": "Rahima",
+    "date": "2025-08-09",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.9956,
+    "name": "Food and Drink",
+    "price": 500,
+    "user": "Rahima",
+    "date": "2025-08-09",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.6782,
+    "name": "Grocery",
+    "price": 181,
+    "user": "Rahima",
+    "date": "2025-08-08",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.8616,
+    "name": "Food and Drink",
+    "price": 59,
+    "user": "Sara",
+    "date": "2025-08-08",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.134,
+    "name": "Grocery",
+    "price": 516,
+    "user": "Ali",
+    "date": "2025-08-08",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.0896,
+    "name": "Food and Drink",
+    "price": 499,
+    "user": "Sara",
+    "date": "2025-08-08",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.485,
+    "name": "Food and Drink",
+    "price": 323,
+    "user": "Sara",
+    "date": "2025-08-08",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.455,
+    "name": "Food and Drink",
+    "price": 267,
+    "user": "Ahmed",
+    "date": "2025-08-07",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.6562,
+    "name": "Shopping",
+    "price": 93,
+    "user": "Sara",
+    "date": "2025-08-07",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013155.1162,
+    "name": "Vehicle Maintenance",
+    "price": 336,
+    "user": "Rahima",
+    "date": "2025-08-06",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.2092,
+    "name": "Transportation",
+    "price": 385,
+    "user": "Sara",
+    "date": "2025-08-06",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.6072,
+    "name": "Grocery",
+    "price": 142,
+    "user": "Rahima",
+    "date": "2025-08-06",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.5037,
+    "name": "Shopping",
+    "price": 62,
+    "user": "Sara",
+    "date": "2025-08-06",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.301,
+    "name": "Grocery",
+    "price": 310,
+    "user": "Rahima",
+    "date": "2025-08-05",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.0078,
+    "name": "Vehicle Maintenance",
+    "price": 339,
+    "user": "Rahima",
+    "date": "2025-08-05",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.51,
+    "name": "Food and Drink",
+    "price": 399,
+    "user": "Ahmed",
+    "date": "2025-08-05",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.5012,
+    "name": "Transportation",
+    "price": 118,
+    "user": "Rahima",
+    "date": "2025-08-05",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.4946,
+    "name": "Housing",
+    "price": 306,
+    "user": "Rahima",
+    "date": "2025-08-04",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.7568,
+    "name": "Shopping",
+    "price": 345,
+    "user": "Sara",
+    "date": "2025-08-04",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.3403,
+    "name": "Entertainment",
+    "price": 337,
+    "user": "Ahmed",
+    "date": "2025-08-04",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.1514,
+    "name": "Transportation",
+    "price": 84,
+    "user": "Sara",
+    "date": "2025-08-04",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.8474,
+    "name": "Housing",
+    "price": 176,
+    "user": "Ali",
+    "date": "2025-08-04",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.2976,
+    "name": "Vehicle Maintenance",
+    "price": 95,
+    "user": "Ali",
+    "date": "2025-08-03",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.7522,
+    "name": "Transportation",
+    "price": 547,
+    "user": "Rahima",
+    "date": "2025-08-03",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.6877,
+    "name": "Housing",
+    "price": 62,
+    "user": "Ahmed",
+    "date": "2025-08-03",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.726,
+    "name": "Housing",
+    "price": 251,
+    "user": "Sara",
+    "date": "2025-08-03",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.5352,
+    "name": "Transportation",
+    "price": 404,
+    "user": "Rahima",
+    "date": "2025-08-03",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.5527,
+    "name": "Transportation",
+    "price": 228,
+    "user": "Rahima",
+    "date": "2025-08-02",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.6895,
+    "name": "Grocery",
+    "price": 450,
+    "user": "Ali",
+    "date": "2025-08-02",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.3938,
+    "name": "Entertainment",
+    "price": 51,
+    "user": "Ahmed",
+    "date": "2025-08-02",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013156.7834,
+    "name": "Housing",
+    "price": 447,
+    "user": "Ali",
+    "date": "2025-08-01",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.5803,
+    "name": "Transportation",
+    "price": 72,
+    "user": "Sara",
+    "date": "2025-08-01",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.6084,
+    "name": "Housing",
+    "price": 334,
+    "user": "Rahima",
+    "date": "2025-08-01",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.7634,
+    "name": "Entertainment",
+    "price": 65,
+    "user": "Rahima",
+    "date": "2025-08-01",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.4526,
+    "name": "Grocery",
+    "price": 547,
+    "user": "Rahima",
+    "date": "2025-07-31",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.911,
+    "name": "Transportation",
+    "price": 278,
+    "user": "Sara",
+    "date": "2025-07-31",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.8445,
+    "name": "Housing",
+    "price": 158,
+    "user": "Sara",
+    "date": "2025-07-31",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.163,
+    "name": "Housing",
+    "price": 201,
+    "user": "Ahmed",
+    "date": "2025-07-30",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.6301,
+    "name": "Grocery",
+    "price": 307,
+    "user": "Ali",
+    "date": "2025-07-30",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.4424,
+    "name": "Transportation",
+    "price": 294,
+    "user": "Ali",
+    "date": "2025-07-30",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.97,
+    "name": "Vehicle Maintenance",
+    "price": 310,
+    "user": "Rahima",
+    "date": "2025-07-30",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.611,
+    "name": "Grocery",
+    "price": 345,
+    "user": "Sara",
+    "date": "2025-07-29",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.188,
+    "name": "Transportation",
+    "price": 168,
+    "user": "Sara",
+    "date": "2025-07-29",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.1404,
+    "name": "Vehicle Maintenance",
+    "price": 389,
+    "user": "Ali",
+    "date": "2025-07-28",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.8333,
+    "name": "Food and Drink",
+    "price": 382,
+    "user": "Ahmed",
+    "date": "2025-07-28",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.7915,
+    "name": "Transportation",
+    "price": 317,
+    "user": "Sara",
+    "date": "2025-07-27",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.8447,
+    "name": "Food and Drink",
+    "price": 255,
+    "user": "Ahmed",
+    "date": "2025-07-27",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.7292,
+    "name": "Grocery",
+    "price": 321,
+    "user": "Ali",
+    "date": "2025-07-26",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.128,
+    "name": "Transportation",
+    "price": 410,
+    "user": "Sara",
+    "date": "2025-07-26",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.5623,
+    "name": "Food and Drink",
+    "price": 462,
+    "user": "Rahima",
+    "date": "2025-07-25",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.1223,
+    "name": "Food and Drink",
+    "price": 548,
+    "user": "Ahmed",
+    "date": "2025-07-25",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.6064,
+    "name": "Food and Drink",
+    "price": 146,
+    "user": "Ahmed",
+    "date": "2025-07-25",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013157.1187,
+    "name": "Grocery",
+    "price": 260,
+    "user": "Ahmed",
+    "date": "2025-07-24",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013158.8372,
+    "name": "Housing",
+    "price": 254,
+    "user": "Rahima",
+    "date": "2025-07-24",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013158.002,
+    "name": "Food and Drink",
+    "price": 92,
+    "user": "Rahima",
+    "date": "2025-07-24",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013158.5046,
+    "name": "Transportation",
+    "price": 280,
+    "user": "Sara",
+    "date": "2025-07-24",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013158.8542,
+    "name": "Transportation",
+    "price": 253,
+    "user": "Ali",
+    "date": "2025-07-23",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013158.3003,
+    "name": "Grocery",
+    "price": 442,
+    "user": "Ahmed",
+    "date": "2025-07-23",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013158.619,
+    "name": "Entertainment",
+    "price": 243,
+    "user": "Ali",
+    "date": "2025-07-22",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013158.8481,
+    "name": "Vehicle Maintenance",
+    "price": 191,
+    "user": "Ali",
+    "date": "2025-07-22",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013158.294,
+    "name": "Entertainment",
+    "price": 541,
+    "user": "Rahima",
+    "date": "2025-07-22",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013158.9995,
+    "name": "Transportation",
+    "price": 116,
+    "user": "Rahima",
+    "date": "2025-07-22",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013158.6758,
+    "name": "Entertainment",
+    "price": 351,
+    "user": "Sara",
+    "date": "2025-07-22",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013158.304,
+    "name": "Housing",
+    "price": 180,
+    "user": "Ahmed",
+    "date": "2025-07-21",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013158.1377,
+    "name": "Food and Drink",
+    "price": 307,
+    "user": "Ahmed",
+    "date": "2025-07-21",
+    "time": "12:53 PM"
+  },
+  {
+    "id": 1755590013158.3015,
+    "name": "Grocery",
+    "price": 90,
+    "user": "Sara",
+    "date": "2025-07-21",
+    "time": "12:53 PM"
+  }
+]

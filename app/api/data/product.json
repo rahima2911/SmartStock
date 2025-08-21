@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Apple iPhone 14",
+    "barcode": "1000010001",
+    "purchasePrice": 700,
+    "sellingPrice": 900,
+    "quantity": 20,
+    "img": "/images/iphone14.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S23",
+    "barcode": "1000010002",
+    "purchasePrice": 650,
+    "sellingPrice": 850,
+    "quantity": 5,
+    "img": "/images/galaxyS23.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Sony WH-1000XM5 Headphones",
+    "barcode": "1000010003",
+    "purchasePrice": 200,
+    "sellingPrice": 300,
+    "quantity": 0,
+    "img": "/images/sony_headphones.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Dell XPS 13 Laptop",
+    "barcode": "1000010004",
+    "purchasePrice": 1000,
+    "sellingPrice": 1200,
+    "quantity": 0,
+    "img": "/images/dell_xps13.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Apple iPad Air",
+    "barcode": "1000010005",
+    "purchasePrice": 500,
+    "sellingPrice": 650,
+    "quantity": 0,
+    "img": "/images/ipad_air.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Logitech MX Master 3 Mouse",
+    "barcode": "1000010006",
+    "purchasePrice": 60,
+    "sellingPrice": 90,
+    "quantity": 0,
+    "img": "/images/mx_master3_new.jpg"
+  },
+  {
+    "id": 7,
+    "name": "OnePlus 11",
+    "barcode": "1000010007",
+    "purchasePrice": 900,
+    "sellingPrice": 1100,
+    "quantity": 0,
+    "img": "/images/oneplus11.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Canon EOS R6 Camera",
+    "barcode": "1000010008",
+    "purchasePrice": 1800,
+    "sellingPrice": 2100,
+    "quantity": 0,
+    "img": "/images/canon_r6.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Bose QuietComfort 45 Headphones",
+    "barcode": "1000010009",
+    "purchasePrice": 250,
+    "sellingPrice": 350,
+    "quantity": 0,
+    "img": "/images/bose_Headphones.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Nintendo Switch OLED",
+    "barcode": "1000010010",
+    "purchasePrice": 300,
+    "sellingPrice": 400,
+    "quantity": 0,
+    "img": "/images/nintendo_switch.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Samsung 32-inch Curved Monitor",
+    "barcode": "1000010011",
+    "purchasePrice": 250,
+    "sellingPrice": 350,
+    "quantity": 0,
+    "img": "/images/curved_monitor.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Apple Watch Series 8",
+    "barcode": "1000010012",
+    "purchasePrice": 350,
+    "sellingPrice": 450,
+    "quantity": 0,
+    "img": "/images/apple_watch8.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Techno Canon",
+    "barcode": "1000010013",
+    "purchasePrice": 600,
+    "sellingPrice": 800,
+    "quantity": 0,
+    "img": "/images/techno_canon.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Sony PlayStation 5",
+    "barcode": "1000010014",
+    "purchasePrice": 450,
+    "sellingPrice": 600,
+    "quantity": 0,
+    "img": "/images/ps5.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Kindle Paperwhite",
+    "barcode": "1000010015",
+    "purchasePrice": 100,
+    "sellingPrice": 150,
+    "quantity": 0,
+    "img": "/images/kindle_paperwhite.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Apple AirPods Pro",
+    "barcode": "1000010016",
+    "purchasePrice": 180,
+    "sellingPrice": 250,
+    "quantity": 0,
+    "img": "/images/airpods_pro.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Samsung Galaxy Buds 2",
+    "barcode": "1000010017",
+    "purchasePrice": 120,
+    "sellingPrice": 180,
+    "quantity": 0,
+    "img": "/images/galaxy_buds2.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Google Nest Hub",
+    "barcode": "1000010018",
+    "purchasePrice": 90,
+    "sellingPrice": 130,
+    "quantity": 0,
+    "img": "/images/nest_hub.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Master Mouse 3",
+    "barcode": "1000010019",
+    "purchasePrice": 60,
+    "sellingPrice": 100,
+    "quantity": 0,
+    "img": "/images/smart_mouse.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Nintendo Switch Lite",
+    "barcode": "1000010020",
+    "purchasePrice": 180,
+    "sellingPrice": 220,
+    "quantity": 0,
+    "img": "/images/switch_lite.jpg"
+  }
+]
