@@ -29,7 +29,7 @@ export default function Sidebar() {
             <span className="hover:text-white cursor-pointer">Dashboard</span>
           </li>
           <li className="px-8">
-            <Link href="/expenses" className="text-white font-semibold">
+            <Link href="/" className="text-white font-semibold">
               Expenses
             </Link>
           </li>
