@@ -1,8 +1,10 @@
+'use client';
+
 import Sidebar from "../../components/Sidebar";
 import StockList from "../../components/StockList";
 import StockForm from "../../components/StockForm";
 
-export default function addStock() {
+export default function AddStock() {
   return (
     <div className="flex h-screen">
       {/* Sidebar - Left Column */}
