@@ -1,3 +1,4 @@
+'use client';
 // components/RightTopCard.jsx
 export default function RightTopCard() {
   return (
