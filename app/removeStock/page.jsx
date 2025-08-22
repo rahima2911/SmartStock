@@ -1,7 +1,4 @@
-"use client";
-
-import React from "react";
-
+import { Suspense } from "react";
 import Sidebar from "../../components/Sidebar";
 import StockList from "../../components/StockList";
 import RemoveStockForm from "../../components/RemoveStockForm";
@@ -14,12 +11,14 @@ export default function RemoveStockPage() {
   
         {/* Middle Section - Stock List */}
         <div className="flex-1">
-          <StockList action="remove" />
+           <Suspense fallback={<p>Loading form...</p>}>
+          <StockList action="remove" /></Suspense>
         </div>
   
         {/* Right Section - Stock Form */}
         <div className="w-[30%]">
-          <RemoveStockForm />
+          <Suspense fallback={<p>Loading form...</p>}>
+          <RemoveStockForm /></Suspense>
         </div>
       </div>
     );
