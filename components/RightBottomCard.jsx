@@ -69,7 +69,6 @@ const RightBottomCard = () => {
       minute: "2-digit",
       hour12: true,
     });
-    const formattedDateTime = now.toLocaleString();
 
     const expenseData = rows.map((row) => ({
       id: Number(`${Date.now()}${Math.floor(Math.random() * 10000)}`),
@@ -79,10 +78,8 @@ const RightBottomCard = () => {
       iconKey: row.iconKey || null,
       date: formattedDate,
       time: formattedTime,
-      editedAt: formattedDateTime,
+      // ❌ no editedAt on add
     }));
-
-    console.log("expenseData", expenseData);
 
     // Prepend new expenses so they appear at the top
     dispatch(addExpense(expenseData.reverse()));
@@ -91,7 +88,7 @@ const RightBottomCard = () => {
     setRows([{ name: "", price: "", user: "Ali", iconKey: "Grocery" }]);
   };
 
-  // ✅ Update expense (Edit Mode) without duplication
+  // ✅ Update expense (Edit Mode) — only here we set editedAt
   const handleUpdate = () => {
     if (!editRow.name || !editRow.price) {
       toast.error("⚠️ Please enter expense name and price");
@@ -107,10 +104,9 @@ const RightBottomCard = () => {
       price: Number(editRow.price),
       user: editRow.user,
       iconKey: editRow.iconKey,
-      editedAt: formattedDateTime,
+      editedAt: formattedDateTime, // ✅ only on update
     };
 
-    // Dispatch update which replaces the item in Redux store
     dispatch(updateExpense(updatedData));
 
     toast.info(
