@@ -9,8 +9,6 @@ import {
 } from "../store/features/expensesSlice";
 import IconPicker from "./IconPicker";
 import { FaTrash } from "react-icons/fa";
-
-// ✅ Import toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -29,6 +27,7 @@ const RightBottomCard = () => {
     iconKey: "Grocery",
   });
 
+  // Populate editRow when editingExpense changes
   useEffect(() => {
     if (editingExpense) {
       setEditRow({
@@ -56,30 +55,51 @@ const RightBottomCard = () => {
     }
   };
 
-  // ✅ Add all rows (Add Mode)
+  // ✅ Add all rows (Add Mode) with newest on top
   const handleSubmitAll = () => {
     if (rows.some((row) => !row.name || !row.price)) {
       toast.error("⚠️ Please fill all expense names and prices");
       return;
     }
 
+    const now = new Date();
+    const formattedDate = now.toISOString().split("T")[0];
+    const formattedTime = now.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    });
+    const formattedDateTime = now.toLocaleString();
+
     const expenseData = rows.map((row) => ({
-      ...row,
+      id: Number(`${Date.now()}${Math.floor(Math.random() * 10000)}`),
+      name: row.name,
       price: Number(row.price),
+      user: row.user,
+      iconKey: row.iconKey || null,
+      date: formattedDate,
+      time: formattedTime,
+      editedAt: formattedDateTime,
     }));
 
-    dispatch(addExpense(expenseData));
+    console.log("expenseData", expenseData);
+
+    // Prepend new expenses so they appear at the top
+    dispatch(addExpense(expenseData.reverse()));
 
     toast.success(`✅ ${rows.length} Expenses Added!`);
     setRows([{ name: "", price: "", user: "Ali", iconKey: "Grocery" }]);
   };
 
-  // ✅ Update expense (Edit Mode)
+  // ✅ Update expense (Edit Mode) without duplication
   const handleUpdate = () => {
     if (!editRow.name || !editRow.price) {
       toast.error("⚠️ Please enter expense name and price");
       return;
     }
+
+    const now = new Date();
+    const formattedDateTime = now.toLocaleString();
 
     const updatedData = {
       ...editingExpense,
@@ -87,11 +107,15 @@ const RightBottomCard = () => {
       price: Number(editRow.price),
       user: editRow.user,
       iconKey: editRow.iconKey,
-      editedAt: new Date().toLocaleString(),
+      editedAt: formattedDateTime,
     };
 
+    // Dispatch update which replaces the item in Redux store
     dispatch(updateExpense(updatedData));
-    toast.info(`✏️ Expense Updated!\nName: ${editRow.name}\nPrice: $${editRow.price}`);
+
+    toast.info(
+      `✏️ Expense Updated!\nName: ${editRow.name}\nPrice: $${editRow.price}`
+    );
     dispatch(clearEditingExpense());
   };
 
@@ -114,19 +138,25 @@ const RightBottomCard = () => {
             placeholder="Expense Name"
             className="border rounded-lg px-3 py-2 text-sm flex-1 focus:outline-blue-600"
             value={editRow.name}
-            onChange={(e) => setEditRow({ ...editRow, name: e.target.value })}
+            onChange={(e) =>
+              setEditRow({ ...editRow, name: e.target.value })
+            }
           />
           <input
             type="number"
             placeholder="Price"
             className="border rounded-lg px-3 py-2 text-sm w-24"
             value={editRow.price}
-            onChange={(e) => setEditRow({ ...editRow, price: e.target.value })}
+            onChange={(e) =>
+              setEditRow({ ...editRow, price: e.target.value })
+            }
           />
           <select
             className="border rounded-lg px-3 py-2 text-sm"
             value={editRow.user}
-            onChange={(e) => setEditRow({ ...editRow, user: e.target.value })}
+            onChange={(e) =>
+              setEditRow({ ...editRow, user: e.target.value })
+            }
           >
             <option>Ali</option>
             <option>Sara</option>
@@ -166,19 +196,25 @@ const RightBottomCard = () => {
                     placeholder="Expense Name"
                     className="border rounded-lg px-3 py-2 text-sm flex-1"
                     value={row.name}
-                    onChange={(e) => handleRowChange(index, "name", e.target.value)}
+                    onChange={(e) =>
+                      handleRowChange(index, "name", e.target.value)
+                    }
                   />
                   <input
                     type="number"
                     placeholder="Price"
                     className="border rounded-lg px-3 py-2 text-sm w-24"
                     value={row.price}
-                    onChange={(e) => handleRowChange(index, "price", e.target.value)}
+                    onChange={(e) =>
+                      handleRowChange(index, "price", e.target.value)
+                    }
                   />
                   <select
                     className="border rounded-lg px-3 py-2 text-sm"
                     value={row.user}
-                    onChange={(e) => handleRowChange(index, "user", e.target.value)}
+                    onChange={(e) =>
+                      handleRowChange(index, "user", e.target.value)
+                    }
                   >
                     <option>Ali</option>
                     <option>Sara</option>
@@ -221,7 +257,6 @@ const RightBottomCard = () => {
         </>
       )}
 
-      {/* ✅ Toast container */}
       <ToastContainer position="top-right" autoClose={2500} theme="colored" />
     </div>
   );

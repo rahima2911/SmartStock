@@ -42,6 +42,7 @@ export default function ExpensesList() {
   const [menuOpen, setMenuOpen] = useState(null);
 
   const todayDate = new Date().toISOString().split("T")[0];
+  
 
   useEffect(() => {
     dispatch(fetchExpenses());

@@ -5,7 +5,7 @@
     "barcode": "1000010001",
     "purchasePrice": 700,
     "sellingPrice": 900,
-    "quantity": 20,
+    "quantity": 10,
     "img": "/images/iphone14.jpg"
   },
   {
@@ -50,7 +50,7 @@
     "barcode": "1000010006",
     "purchasePrice": 60,
     "sellingPrice": 90,
-    "quantity": 0,
+    "quantity": 10,
     "img": "/images/mx_master3_new.jpg"
   },
   {

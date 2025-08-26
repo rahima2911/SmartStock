@@ -1,47 +1,32 @@
-import { NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
+import { connectDB } from "@/utils/db";
+import Expense from "@/models/Expense";
 
-const filePath = path.join(process.cwd(), "app", "api", "data", "db.json");
-
-function readData() {
-  if (!fs.existsSync(filePath)) return [];
-  return JSON.parse(fs.readFileSync(filePath, "utf-8"));
-}
-
-function writeData(data) {
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-}
-
-// PUT → Update
-export async function PUT(req, { params }) {
+export async function PUT(request, { params }) {
+  await connectDB();
   const { id } = params;
-  const body = await req.json();
+  const body = await request.json();
 
-  const expenses = readData();
-  const index = expenses.findIndex((e) => String(e.id) === String(id));
+  const updated = await Expense.findByIdAndUpdate(
+    id,
+    { ...body, editedAt: new Date().toLocaleString() },
+    { new: true }
+  );
 
-  if (index === -1) {
-    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  if (!updated) {
+    return new Response(JSON.stringify({ error: "Not found" }), { status: 404 });
   }
 
-  expenses[index] = {
-    ...expenses[index],
-    ...body,
-    editedAt: new Date().toLocaleString(), // ✅ edited ka time save
-  };
-
-  writeData(expenses);
-  return NextResponse.json(expenses[index]);
+  return new Response(JSON.stringify(updated), { status: 200 });
 }
 
-// DELETE → Remove
-export async function DELETE(req, { params }) {
+export async function DELETE(request, { params }) {
+  await connectDB();
   const { id } = params;
-  let expenses = readData();
+  const deleted = await Expense.findByIdAndDelete(id);
 
-  expenses = expenses.filter((e) => String(e.id) !== String(id));
+  if (!deleted) {
+    return new Response(JSON.stringify({ error: "Not found" }), { status: 404 });
+  }
 
-  writeData(expenses);
-  return NextResponse.json({ message: "Deleted" });
+  return new Response(JSON.stringify({ message: "Deleted" }), { status: 200 });
 }

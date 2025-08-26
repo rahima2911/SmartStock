@@ -1,55 +1,77 @@
-import fs from "fs";
-import path from "path";
-
-const filePath = path.join(process.cwd(), "app/api/data/product.json");
-
-const readData = () => JSON.parse(fs.readFileSync(filePath));
-const writeData = (data) =>
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+import { connectDB } from "@/utils/db";
+import Product from "@/models/Product";
 
 export async function PUT(request, context) {
-  // ✅ await params
+  await connectDB();
+  
+  // ✅ NextJS 15 requires awaiting params
   const params = await context.params;
+  const { id } = params;
+  
+  const data = await request.json();
 
-  const products = readData();
+  try {
+    const product = await Product.findById(id);
+    if (!product) {
+      return new Response(JSON.stringify({ error: "Product not found" }), { 
+        status: 404,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
 
-  const index = products.findIndex((p) => p.id === parseInt(params.id, 10));
-  if (index === -1) {
-    return new Response("Product not found", { status: 404 });
+    // Handle quantity update (additive like your original)
+    if (data.quantity !== undefined) {
+      product.quantity = (product.quantity || 0) + Number(data.quantity);
+    }
+
+    // Update other fields
+    Object.keys(data).forEach(key => {
+      if (key !== 'quantity') {
+        product[key] = data[key];
+      }
+    });
+
+    await product.save();
+
+    return new Response(JSON.stringify(product), { 
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  } catch (error) {
+    console.error('PUT Error:', error);
+    return new Response(JSON.stringify({ error: "Failed to update product" }), { 
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
-
-  const updatedData = await request.json();
-
-  // ✅ additive quantity update
-  if (updatedData.quantity !== undefined) {
-    products[index].quantity =
-      (products[index].quantity || 0) + Number(updatedData.quantity);
-  }
-
-  products[index] = {
-    ...products[index],
-    ...updatedData,
-    quantity: products[index].quantity,
-  };
-
-  writeData(products);
-
-  return new Response(JSON.stringify(products[index]), { status: 200 });
 }
 
 export async function DELETE(request, context) {
-  // ✅ await params
+  await connectDB();
+  
+  // ✅ NextJS 15 requires awaiting params
   const params = await context.params;
+  const { id } = params;
 
-  const products = readData();
+  try {
+    const deleted = await Product.findByIdAndDelete(id);
 
-  const index = products.findIndex((p) => p.id === parseInt(params.id, 10));
-  if (index === -1) {
-    return new Response("Product not found", { status: 404 });
+    if (!deleted) {
+      return new Response(JSON.stringify({ error: "Product not found" }), { 
+        status: 404,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    return new Response(JSON.stringify(deleted), { 
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  } catch (error) {
+    console.error('DELETE Error:', error);
+    return new Response(JSON.stringify({ error: "Failed to delete product" }), { 
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
-
-  const deleted = products.splice(index, 1);
-  writeData(products);
-
-  return new Response(JSON.stringify(deleted[0]), { status: 200 });
 }

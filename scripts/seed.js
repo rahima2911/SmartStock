@@ -1,53 +1,52 @@
 import fs from "fs";
 import path from "path";
+import mongoose from "mongoose";
+import Product from "../models/Product.js";
+import Expense from "../models/Expense.js";
+import dotenv from "dotenv";
+import { fileURLToPath } from "url";
 
-const filePath = path.join(process.cwd(), "app", "api", "data", "db.json");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-function generateDummyData() {
-  const users = ["Ali", "Sara", "Ahmed", "Rahima"];
-  const expenseNames = [
-    "Grocery",
-    "Food and Drink",
-    "Transportation",
-    "Shopping",
-    "Housing",
-    "Entertainment",
-    "Vehicle Maintenance",
-  ];
+dotenv.config({ path: path.join(__dirname, "../.env.local") });
 
-  const data = [];
-  const today = new Date();
+const MONGODB_URI = "mongodb+srv://rahimasarwar29:riuPrs5w1J6pkMfu@cluster0.cuye5nt.mongodb.net/smartstock?retryWrites=true&w=majority";
+console.log("MongoDB URI:", MONGODB_URI);
 
-  for (let i = 0; i < 30; i++) {
-    const date = new Date(today);
-    date.setDate(today.getDate() - i);
-
-    // Daily 2-5 random expenses
-    const dailyCount = Math.floor(Math.random() * 4) + 2;
-
-    for (let j = 0; j < dailyCount; j++) {
-      const user = users[Math.floor(Math.random() * users.length)];
-      const name = expenseNames[Math.floor(Math.random() * expenseNames.length)];
-      const price = (Math.floor(Math.random() * 500) + 50).toFixed(2);
-
-      data.push({
-        id: Date.now() + Math.random(),
-        name,
-        price: Number(price),
-        user,
-        date: date.toISOString().split("T")[0],
-        time: date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
-      });
-    }
-  }
-
-  return data;
+if (!MONGODB_URI) {
+  console.error("❌ Please set MONGODB_URI in .env.local");
+  process.exit(1);
 }
 
-function seed() {
-  const dummyData = generateDummyData();
-  fs.writeFileSync(filePath, JSON.stringify(dummyData, null, 2));
-  console.log("✅ db.json generated with last 30 days dummy data.");
+async function seed() {
+  try {
+    await mongoose.connect(MONGODB_URI);
+    console.log("✅ Connected to MongoDB Atlas");
+
+    const productsPath = path.join(__dirname, "../app/api/data/product.json");
+    if (fs.existsSync(productsPath)) {
+      const products = JSON.parse(fs.readFileSync(productsPath, "utf-8"));
+      await Product.deleteMany({});
+      await Product.insertMany(products);
+      console.log(`✅ Inserted ${products.length} products`);
+    } else console.log("⚠️ product.json not found");
+
+    const expensesPath = path.join(__dirname, "../app/api/data/db.json");
+    if (fs.existsSync(expensesPath)) {
+      const expenses = JSON.parse(fs.readFileSync(expensesPath, "utf-8"));
+      await Expense.deleteMany({});
+      await Expense.insertMany(expenses);
+      console.log(`✅ Inserted ${expenses.length} expenses`);
+    } else console.log("⚠️ db.json not found");
+
+    console.log("🎉 Seeding complete!");
+  } catch (err) {
+    console.error("❌ Seeding error:", err);
+  } finally {
+    await mongoose.disconnect();
+    process.exit(0);
+  }
 }
 
 seed();
